@@ -567,6 +567,7 @@ static size_t ws_packethead(struct Curl_easy *data,
   }
   else {
     ws->ws.contfragment = TRUE;
+    firstbyte |= opcode;
   }
   out[0] = firstbyte;
   if(len > 65535) {
